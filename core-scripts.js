@@ -47,9 +47,8 @@ function loadStyle(getStyleDirectory) {
 
     console.log(`Loading: ${getStyleDirectory}`);
 
-    // adapt path to local context
+    // adapt path to local context by getting the path from the location URL string
     const urlRoot = location.pathname;
-    console.log("url root:" + urlRoot);
 
     // add chosen CSS file
     let addedStyle = document.createElement("link");
