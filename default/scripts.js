@@ -10,7 +10,8 @@ Make sure its starting line is "export function initializePage() {" and leave in
 // start your JS here
 export function initializePage() {
 
-    // output message to console
+    // output message to console and update page title
     console.log("Default style loaded");
+    document.title += (" Default");
 
 }

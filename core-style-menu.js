@@ -4,11 +4,11 @@
         "path":"default"
     },
     {
-        "label":"Dark Mode",
+        "label":"Dark Sans",
         "path":"dark-demo"
     },
     {
-        "label":"Light Mode",
+        "label":"Light Serif",
         "path":"light-demo"
     }
 ]

@@ -1,4 +1,10 @@
-/* example dark-mode layout — the opposite of the light mode example */
+/* 
+
+Dark Sans CSS
+
+The opposite of the light mode example.
+
+*/
 
 /* import a font from Google */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
@@ -18,22 +24,22 @@ body {
     color: var(--fore-color);
 }
 
-/* set the major elements to a max width of 1100px, centered with auto side margins */
+/* set the major elements to a max width of 1050px, centered with auto side margins */
 header,
 main, 
 footer {
-    max-width: 1100px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
 /* make the header full height and use flexbox in column direction to stack child elements at the bottom */
 header {
-    height: calc(100vh - var(--nav-height) ); /* referencing a variable from the default CSS stylesheet */
+    height: calc(100vh - var(--nav-height) + 2px); /* referencing a variable from the default CSS stylesheet */
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
     padding-bottom: 2em;
-    border-bottom: 1px solid var(--fore-color);
+    border-bottom: 1px dashed var(--fore-color);
     margin-bottom: 2em;
 }
 
@@ -55,7 +61,7 @@ header p {
 /* baseline font size and line spacing */
 main p,
 main li {
-    font-size: 1.0em;
+    font-size: 0.9em;
     line-height: 1.7em;
 } 
 
@@ -71,7 +77,7 @@ main > p:nth-of-type(1) {
 
 /* JS is moving the aside block elsewhere; here it is styled here with a border and extra padding/margin */
 aside {
-    border-top: 1px solid var(--fore-color);
+    border-top: 1px dashed var(--fore-color);
     padding-top: 1rem;
     margin-top: 10rem;
 }
@@ -100,7 +106,7 @@ main li strong {
 /* style the footer block with border, color, and spacing */
 footer {
     font-size: 0.75rem;
-    border-top: 1px solid var(--fore-color);
+    border-top: 1px dashed var(--fore-color);
     padding-top: 1rem;
     margin-top: 10rem;
 }

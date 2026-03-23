@@ -1,8 +1,8 @@
 Layout name:
-Light Serif
+Dark Sans
 
 Layout path:
-light-demo
+dark-demo
 
 Description:
 This layout modifies the original page by adding fonts, color, spacing, and borders.

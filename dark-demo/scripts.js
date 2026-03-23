@@ -1,6 +1,6 @@
 /* 
 
-Dark Mode JavaScript 
+Dark Sans JavaScript 
 
 Instead of document.addEventListener() with DOMContentLoaded, put your initialization code inside the "initalize()" function.
 Make sure its starting line is "export function initializePage() {" and leave in the first console log message.
@@ -10,8 +10,9 @@ Make sure its starting line is "export function initializePage() {" and leave in
 // start your JS here
 export function initializePage() {
 
-    // output message to console
-    console.log("Dark Mode style loaded");
+    // output message to console and update page title
+    console.log("Dark Sans style loaded");
+    document.title += (" Dark Sans");
 
     // move the aside to the end of main
     let currentAside = document.querySelector("aside");

@@ -1,7 +1,13 @@
-/* example light-mode layout — the opposite of the dark mode example */
+/* 
+
+Light Serif CSS
+
+The opposite of the dark mode example.
+
+*/
 
 /* import a font from Google */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* create variables for colors */
 :root {
@@ -13,22 +19,22 @@
 /* set padding, font, and basic background and text colors */
 body {
     padding: 1em;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Serif", serif;
     background-color: var(--back-color);
     color: var(--fore-color);
 }
 
-/* set the major elements to a max width of 1100px, centered with auto side margins */
+/* set the major elements to a max width of 1050px, centered with auto side margins */
 header,
 main, 
 footer {
-    max-width: 1100px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
 /* make the header full height and use flexbox in column direction to stack child elements at the bottom */
 header {
-    height: calc(100vh - var(--nav-height) ); /* referencing a variable from the default CSS stylesheet */
+    height: calc(100vh - var(--nav-height) + 2px); /* referencing a variable from the default CSS stylesheet */
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
@@ -55,7 +61,7 @@ header p {
 /* baseline font size and line spacing */
 main p,
 main li {
-    font-size: 1.0em;
+    font-size: 0.9em;
     line-height: 1.7em;
 } 
 

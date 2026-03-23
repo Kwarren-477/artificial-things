@@ -8,6 +8,7 @@ Your added JS, if any, should initialize itself through a function called initia
 
 */
 
+
 // nav function to hide/show menu items 
 function clickNav(bodyClicked) {
     let navHandle = document.querySelector("nav");
@@ -23,6 +24,7 @@ function clickNav(bodyClicked) {
         }
     }
 }
+
 
 // read style from URL string, if available
 function parseQuery() {
@@ -42,6 +44,7 @@ function parseQuery() {
     loadStyle(styleDirectory);
 }
 
+
 // load requested style, if possible
 function loadStyle(getStyleDirectory) {
 
@@ -60,15 +63,15 @@ function loadStyle(getStyleDirectory) {
     // add chosen JS file
     loadJS(`${urlRoot}${getStyleDirectory}/scripts.js`);
 
-    // change page title
-    document.title += ` (${getStyleDirectory})`;
 }
+
 
 // load a new JS file from a given path and run the function "initialize" from it
 async function loadJS(fromPath) {
     let newJS = await import(fromPath);
     newJS.initializePage();
 }
+
 
 // generic ajax function for getting data
 async function getData(url, options = {}) {
@@ -85,9 +88,10 @@ async function getData(url, options = {}) {
     }
 }
 
+
 // dynamically style info from JSON data in core-style-menu.js
 async function loadStyleMenu() {
-    document.querySelector("#styleList").innerHTML = "";
+    document.querySelector("#styleList").innerHTML = ""; // clear existing innerHTML, if any
     getData("core-style-menu.js").then(function(menuItems) {
         for (oneItem of menuItems) {
             document.querySelector("#styleList").innerHTML += `<li><a href="?style=${oneItem.path}">${oneItem.label}</a></li>`;
@@ -95,10 +99,11 @@ async function loadStyleMenu() {
     });
 }
 
+
 // load click events after DOM loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-    // dynamically generate style menu from json file
+    // dynamically generate style menu from json file — do this before adding event listeners!
     loadStyleMenu();
 
     // respond to clicks on the burger
